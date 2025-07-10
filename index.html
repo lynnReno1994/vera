@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>舞蹈交流群海报</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'PingFang SC', 'Helvetica Neue', Arial, '微软雅黑', sans-serif;
+      background: #18181a;
+      color: #fff;
+      letter-spacing: 0.03em;
+    }
+    .poster {
+      width: 420px;
+      margin: 40px auto;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 0 24px 2px #ff3cac22;
+      background: #23232b;
+      /* border: 2.5px solid; */
+      border-image: linear-gradient(120deg, #ff3cac 0%, #784ba0 100%);
+      border-image-slice: 1;
+    }
+    .poster-top {
+      position: relative;
+      min-height: 220px; /* 可选，保证有最小高度 */
+      background: url('./bg.JPG') center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 32px 32px 32px;
+    }
+    .poster-top::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      /* 增加模糊效果 */
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      background: linear-gradient(180deg,rgba(24,24,26,0.18) 40%,rgba(24,24,26,0.95) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .poster-top > div {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding-top: 18px;
+      padding-left: 8px;
+      padding-right: 8px;
+      /* 文字背景色和圆角 */
+      /* background: rgba(24, 24, 26, 0.68);
+      border-radius: 18px;
+      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10); */
+    }
+    .poster-title {
+      position: relative;
+      z-index: 2;
+      font-family: 'Montserrat', 'PingFang SC', 'Helvetica Neue', Arial, '微软雅黑', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 0.08em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      -webkit-font-smoothing: antialiased;
+      font-smooth: always;
+    }
+    .poster-desc {
+      position: relative;
+      z-index: 2;
+      font-family: 'Montserrat', 'PingFang SC', 'Helvetica Neue', Arial, '微软雅黑', sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      -webkit-font-smoothing: antialiased;
+      font-smooth: always;
+    }
+    .poster-bottom {
+      background: #23232b;
+      padding: 32px 24px 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      position: relative;
+    }
+    .poster-img {
+      width: 48%;
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+      object-fit: cover;
+      /* box-shadow: 0 4px 16px rgba(0,0,0,0.18), 0 0 0 3px #ff3cac44, 0 0 12px 2px #784ba033; */
+      /* border: 2px solid #2e2e38; */
+      background: #1a1a1e;
+      transition: box-shadow 0.3s;
+    }
+    .poster-img:hover {
+      box-shadow: 0 4px 32px 4px #ff3cac99, 0 0 0 3px #784ba0cc;
+    }
+    .poster-shoes {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-18deg);
+      width: 54px;
+      height: 54px;
+      z-index: 2;
+      opacity: 0.88;
+      animation: shoes-rotate 3.5s linear infinite;
+    }
+    @keyframes shoes-rotate {
+      0% { transform: translate(-50%, -50%) rotate(-18deg); }
+      100% { transform: translate(-50%, -50%) rotate(342deg); }
+    }
+    .poster-dance-icon {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      width: 48px;
+      height: 48px;
+      z-index: 3;
+      opacity: 0.75;
+      filter: drop-shadow(0 2px 8px #0008);
+    }
+    @media (max-width: 500px) {
+      .poster {
+        width: 98vw;
+        min-width: 0;
+      }
+      .poster-top {
+        padding: 0 12px 18px 12px;
+        height: 220px;
+      }
+      .poster-bottom {
+        padding: 18px 6px 14px 6px;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <svg class="poster-dance-icon" viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="32" rx="28" ry="28" fill="#ff3cac" fill-opacity="0.18"/><path d="M32 12c2.5 0 4.5 2 4.5 4.5S34.5 21 32 21s-4.5-2-4.5-4.5S29.5 12 32 12zm-7.5 13c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5V32c0 2.5-2 4.5-4.5 4.5s-4.5-2-4.5-4.5v-7zm15 0c0-2.5-2-4.5-4.5-4.5s-4.5 2-4.5 4.5V32c0 2.5 2 4.5 4.5 4.5s4.5-2 4.5-4.5v-7z" fill="#ff3cac"/></svg>
+    <div class="poster-top">
+      <div>
+        <div class="poster-title">嘿大家好呀～👋</div>
+        <div class="poster-desc">
+          因为我们有两个群，发现两个群分着用有点麻烦，通知和互动都不太方便。<br><br>
+          所以我打算建一个全新的舞蹈交流群，把大家整合到一起，<br>
+          后面有活动 / 课程 / 小班训练 也都统一在这个群里通知，会更清晰也更方便！<br><br>
+          💡新群会是之后的唯一小群，两个旧群会在【2天后】解散～<br><br>
+          为了不打扰大家，有需要的可自行扫码进群，满200可私信我，我会陆续拉大家进新群，看到邀请记得点一下哈～<br>
+          也欢迎进群打个招呼、重新认识一下彼此～🫶<br><br>
+          感谢大家的支持和陪伴，我们新群见！💃🕺
+        </div>
+      </div>
+    </div>
+    <div class="poster-bottom">
+      <img class="poster-img" src="./qun.jpg" alt="二维码或群聊图片1">
+      <!-- <svg class="poster-shoes" viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="32" rx="28" ry="12" fill="#fff" fill-opacity="0.12"/><path d="M18 44c2-8 10-12 18-8l8 4c2 1 2 4 0 5l-8 4c-8 4-16 0-18-8z" fill="#ff3cac"/><path d="M46 44c-2-8-10-12-18-8l-8 4c-2 1-2 4 0 5l8 4c8 4 16 0 18-8z" fill="#784ba0"/></svg> -->
+      <img class="poster-img" src="./vera.jpg" alt="二维码或群聊图片2">
+    </div>
+  </div>
+  <button id="download-btn" style="display:block;margin:20px auto 0 auto;">导出为图片</button>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    document.getElementById('download-btn').onclick = function() {
+      html2canvas(document.querySelector('.poster')).then(canvas => {
+        // 创建下载链接
+        let link = document.createElement('a');
+        link.download = 'poster.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
+    }
+  </script>
+</body>
+</html>
